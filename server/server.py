@@ -260,11 +260,13 @@ def main():
     # create socket for connection
     try:
         server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        server_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+
     except socket.error:
         logging.error("socket.socket error")
         sys.exit(-1)
 
-    host = "localhost"
+    host = "157.253.210.164"
     port=8080
     # bind socket
     try:

@@ -125,6 +125,8 @@ def connection_init(address):
 
     try:
         connection = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        connection.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+
     except socket.error:
         logging.error("socket.socket error")
         sys.exit(-1)
