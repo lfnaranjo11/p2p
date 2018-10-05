@@ -242,7 +242,7 @@ def main():
         configuration = json_load(configuration_file)
     else:
         # create and initialize the configuration file
-        configuration["host"] = "157.253.210.164"
+        configuration["host"] = "157.253.205.7"
         configuration["port"] = 8080
         configuration["username_offset"] = 0
         json_save(configuration_file, configuration)

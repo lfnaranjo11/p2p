@@ -377,7 +377,7 @@ def main():
         configuration = json_load(configuration_file)
     else:
         # create and initialize the configuration file
-        configuration["server_host"] = "localhost"
+        configuration["server_host"] = "157.253.205.7"
         configuration["server_port"] = 8080
         configuration["listening_ip"] = "localhost"
         configuration["listening_port"] = 0
